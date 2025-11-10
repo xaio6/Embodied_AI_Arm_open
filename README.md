@@ -712,7 +712,7 @@ os.environ['AISDK_DEBUG'] = '1'
 1. **注明出处**：在你的产品、文档或宣传材料中明确标注：
    ```
    本项目基于 Horizon 具身智能机械臂控制系统
-   原项目地址：https://github.com/your-repo/Horizon_Arm
+   原项目地址：https://github.com/xaio6/Embodied_AI_Arm_open
    原作者B站：https://space.bilibili.com/xxxxx
    ```
 

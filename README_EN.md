@@ -712,7 +712,7 @@ This project is licensed under the **MIT License**, you are free to:
 1. **Attribution**: Clearly state in your product, documentation, or promotional materials:
    ```
    This project is based on Horizon Embodied Intelligence Robotic Arm Control System
-   Original project: https://github.com/your-repo/Horizon_Arm
+   Original project: https://github.com/xaio6/Embodied_AI_Arm_open
    Original author's Bilibili: https://www.bilibili.com/video/BV13LkDBeEpy
    ```
 
