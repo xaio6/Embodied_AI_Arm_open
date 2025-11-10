@@ -22,9 +22,11 @@
 ## 📺 视频教程
 
 完整的系统介绍请观看：
-- 🎬 [ Horizon具身智能机械臂系统](https://www.bilibili.com/video/BV13LkDBeEpy)
+- [ Horizon具身智能机械臂系统](https://www.bilibili.com/video/BV13LkDBeEpy)
 
 如果觉得项目对你有帮助，欢迎点赞👍、收藏⭐、投币🪙支持！
+
+- [操作文档](http://cloud1-5gtxchcb6b77f5b1-1333769860.tcloudbaseapp.com/)
 
 ## 🎯 项目概述
 
