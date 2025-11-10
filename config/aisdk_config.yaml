@@ -1,0 +1,46 @@
+cache:
+  enabled: false
+  max_size: 1000
+  ttl: 300
+  type: memory
+development:
+  debug: false
+  log_requests: false
+  mock_responses: false
+logging:
+  backup_count: 5
+  file: AI_SDK.log
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  level: INFO
+  max_size: 10485760
+providers:
+  alibaba:
+    api_key: sk-d6cb56a663a443eb803fef40b397b0
+    default_params:
+      max_tokens: 2000
+      temperature: 0.7
+      top_p: 0.8
+    description: 阿里云通义千问
+    enabled: true
+  deepseek:
+    api_key: sk-0c2b9e39ba8648e582a216ed799fce
+    default_params:
+      max_tokens: 2000
+      temperature: 0.7
+      top_p: 1.0
+    description: DeepSeek深度求索
+    enabled: true
+request:
+  max_retries: 3
+  retry_delay: 1.0
+  timeout: 60
+security:
+  api_key_encryption: false
+  rate_limiting:
+    enabled: false
+    requests_per_minute: 60
+session:
+  auto_cleanup: true
+  cleanup_interval: 3600
+  default_max_history: 20
+  max_sessions: 100

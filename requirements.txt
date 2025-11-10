@@ -1,0 +1,32 @@
+mujoco>=2.3.0
+numpy==2.3.3  #python==3.12
+matplotlib>=3.5.0 
+opencv-python==4.10.0.84        # OpenCV计算机视觉库 (用于双目摄像头)
+# opencv-python-headless==4.10.0.84
+PyQt5==5.15.11
+PyQt5-Qt5==5.15.11
+PyQt5_sip==12.15.0
+
+requests>=2.25.0
+aiohttp>=3.8.0
+openai>=1.0.0
+
+websocket-client>=1.6.0
+pyaudio==0.2.14
+dashscope>=1.14.0
+
+# 可选依赖（用于音频处理）
+# 在Windows上安装pyaudio可能需要：pip install pipwin && pipwin install pyaudio
+# 在Linux上可能需要：sudo apt-get install portaudio19-dev python3-pyaudio
+# 在macOS上可能需要：brew install portaudio && pip install pyaudio
+
+pydantic>=2.0.0
+python-dotenv>=1.0.0
+typing-extensions>=4.0.0
+asyncio
+PyYAML>=6.0
+# wave 
+
+python-can>=4.0.0          # CAN通信库
+pyserial>=3.5              # 串口通信库 (用于串口转CAN)
+typing-extensions>=4.0.0 

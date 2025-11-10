@@ -1,0 +1,41 @@
+MIT License
+
+Copyright (c) 2025 Horizon AI Lab
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+商用声明 (Commercial Use Notice):
+
+如果您将本项目用于商业用途，请遵守以下额外要求：
+
+1. 在您的产品、文档或宣传材料中明确注明本项目的出处：
+   - 项目名称：Horizon 具身智能机械臂控制系统
+   - 原项目地址：https://github.com/your-repo/Horizon_Arm
+   - 原作者B站：https://www.bilibili.com/video/BV13LkDBeEpy
+
+2. 保留所有版权声明和许可证信息
+
+3. 不得声称本项目代码为您的原创作品
+
+4. 欢迎但不强制：如果基于本项目开发了有趣的应用，欢迎反馈给原作者
+
+违反以上商用声明的行为，原作者保留追究法律责任的权利。
+

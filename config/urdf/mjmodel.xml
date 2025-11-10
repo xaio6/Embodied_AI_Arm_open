@@ -1,0 +1,114 @@
+<mujoco model="arm_v2_interactive">
+  <!-- 编译器设置，改为度数制 -->
+  <compiler angle="degree"/>
+
+  <!-- =================================================
+       全局仿真选项 (Option) 和视觉效果 (Visual)
+       ================================================= -->
+  <option>
+    <!-- 2. 关闭不必要的物理计算，但保留执行器功能 -->
+    <flag contact="disable"
+          gravity="disable"          
+          limit="disable"/>
+    <!-- 注意：我们不再禁用 actuation，因为滑块需要它 -->
+  </option>
+
+  <visual>
+    <!-- 改进的灯光和渲染设置 -->
+    <headlight ambient="0.6 0.6 0.6" diffuse="0.8 0.8 0.8" specular="0.3 0.3 0.3"/>
+    <rgba haze="0.15 0.25 0.35 1"/>
+    <global offwidth="2048" offheight="2048"/>
+    <quality shadowsize="4096"/>
+    <map fogstart="3" fogend="10" force="0.1"/>
+  </visual>
+  
+  <!-- =================================================
+       材质定义
+       ================================================= -->
+  <asset>
+    <!-- 机械臂网格文件 -->
+    <mesh name="base_link"  file="base_link.STL"/>
+    <mesh name="1_Link"  file="1_Link.STL"/>
+    <mesh name="2_Link"  file="2_Link.STL"/>
+    <mesh name="3_Link"  file="3_Link.STL"/>
+    <mesh name="4_Link"  file="4_Link.STL"/>
+    <mesh name="5_Link"  file="5_Link.STL"/>
+    <mesh name="6_Link"  file="6_Link.STL"/>
+    
+    <!-- 材质定义 -->
+    <material name="floor_mat" rgba="0.7 0.8 0.9 1" specular="0.3" shininess="0.5" reflectance="0.2"/>
+    <material name="wall_mat" rgba="0.9 0.9 0.95 1" specular="0.1" shininess="0.1"/>
+    <material name="base_mat" rgba="0.2 0.3 0.8 1" specular="0.4" shininess="0.8"/>
+    <material name="link1_mat" rgba="0.3 0.3 0.3 1" specular="0.5" shininess="0.6"/>
+    <material name="link2_mat" rgba="0.1 0.4 0.8 1" specular="0.5" shininess="0.6"/>
+    <material name="link3_mat" rgba="0.3 0.3 0.3 1" specular="0.5" shininess="0.6"/>
+    <material name="link4_mat" rgba="0.1 0.4 0.8 1" specular="0.5" shininess="0.6"/>
+    <material name="link5_mat" rgba="0.3 0.3 0.3 1" specular="0.5" shininess="0.6"/>
+    <material name="link6_mat" rgba="0.9 0.9 0.9 1" specular="0.7" shininess="0.8"/>
+    <material name="grid_mat" texture="grid" rgba="1 1 1 0.8" specular="0.1" shininess="0.1"/>
+    
+    <!-- 纹理 -->
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0.0 0.1 0.2" width="512" height="512"/>
+    <texture name="grid" type="2d" builtin="checker" rgb1="0.8 0.9 1" rgb2="0.6 0.7 0.8" width="512" height="512" mark="cross" markrgb="0.2 0.3 0.4"/>
+  </asset>
+
+  <!-- =================================================
+       世界环境和机械臂模型
+       ================================================= -->
+  <worldbody>
+    <!-- 改进的地面 -->
+    <geom name="floor" type="plane" size="3 3 0.1" material="floor_mat" condim="3"/>
+    <geom name="grid_floor" type="plane" size="3 3 0.05" pos="0 0 0.001" material="grid_mat" condim="3"/>
+    
+    <!-- 环境照明 -->
+    <light name="spotlight1" pos="2 2 4" dir="-1 -1 -2" diffuse="0.8 0.8 0.8" specular="0.3 0.3 0.3" directional="false"/>
+    <light name="spotlight2" pos="-2 2 4" dir="1 -1 -2" diffuse="0.6 0.6 0.6" specular="0.2 0.2 0.2" directional="false"/>
+    <light name="ambient" pos="0 0 6" dir="0 0 -1" diffuse="0.4 0.4 0.4" directional="true"/>
+    
+    <!-- 你的机械臂模型 -->
+    <geom type="mesh" material="base_mat" mesh="base_link"/>
+    <body name="1_Link" pos="0 0 0.1155">
+      <inertial pos="0.000120272 -0.0447894 0.0454" quat="0.707107 0 0 0.707107" mass="0.00131109" diaginertia="9.66095e-07 4.84276e-07 4.84276e-07"/>
+      <joint name="1_join" pos="0 0 0" axis="0 0 1" range="-180 180" actuatorfrcrange="-1 1"/>
+      <geom type="mesh" rgba="1 0.6 0 1" mesh="1_Link"/>
+      <body name="2_Link" pos="0.00010086 -0.05551 0.045437" quat="0.707105 -0.707108 0 0">
+        <inertial pos="0.000192472 -0.0945429 0.00353446" quat="0.507524 0.493097 -0.5048 0.494421" mass="0.101643" diaginertia="0.000584578 0.000543713 5.34073e-05"/>
+        <joint name="2_join" pos="0 0 0" axis="0 0 1" range="-180 180" actuatorfrcrange="-1 1"/>
+        <geom type="mesh" rgba="1 1 0 1" mesh="2_Link"/>
+        <body name="3_Link" pos="-0.00010969 -0.20005 0.0185">
+          <inertial pos="0.0133259 -0.00410584 0.023275" quat="0.5 0.5 -0.5 0.5" mass="0.000809296" diaginertia="2.00722e-07 1.78283e-07 1.26414e-07"/>
+          <joint name="3_join" pos="0 0 0" axis="0 0 1" range="-180 180" actuatorfrcrange="-1 1"/>
+          <geom type="mesh" rgba="0.690196 0.690196 0.690196 1" mesh="3_Link"/>
+          <body name="4_Link" pos="0.071553 -0.021421 0.042136" quat="0.499998 -0.5 0.500002 -0.5">
+            <inertial pos="6.8702e-05 -0.000355824 0.07957" quat="0.999924 0.00262381 -0.00757171 -0.00938762" mass="0.113855" diaginertia="0.000383234 0.000365652 0.000121799"/>
+            <joint name="4_join" pos="0 0 0" axis="0 0 1" range="-180 180" actuatorfrcrange="-1 1"/>
+            <geom type="mesh" rgba="1 1 0 1" mesh="4_Link"/>
+            <body name="5_Link" pos="-0.00013107 -0.016964 0.14858" quat="0.501099 0.498901 -0.501097 0.498899">
+              <inertial pos="0.0234334 -2.07165e-05 -0.0167505" quat="0.000732964 0.698037 -0.000601433 0.716061" mass="0.0448861" diaginertia="3.37917e-05 3.06727e-05 1.31292e-05"/>
+              <joint name="5_join" pos="0 0 0" axis="0 0 1" range="-180 180" actuatorfrcrange="-1 1"/>
+              <geom type="mesh" rgba="0 0 0 1" mesh="5_Link"/>
+              <body name="6_Link" pos="0.05286 -5.5958e-05 -0.016964" quat="0.501104 -0.498892 0.501108 -0.498892">
+                <inertial pos="0.00534356 -0.00011733 0.0202068" quat="0.652949 0.677189 0.234833 -0.244799" mass="0.0930953" diaginertia="6.6877e-05 5.8389e-05 3.13453e-05"/>
+                <joint name="6_join" pos="0 0 0" axis="0 0 1" range="-180 180" actuatorfrcrange="-1 1"/>
+                <geom type="mesh" rgba="0 0 0 1" mesh="6_Link"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  
+  <!-- =================================================
+       执行器配置
+       ================================================= -->
+  <actuator>
+    <position name="pos_1" joint="1_join" kp="0" ctrllimited="true" ctrlrange="-180 180"/>
+    <position name="pos_2" joint="2_join" kp="0" ctrllimited="true" ctrlrange="-180 180"/>
+    <position name="pos_3" joint="3_join" kp="0" ctrllimited="true" ctrlrange="-180 180"/>
+    <position name="pos_4" joint="4_join" kp="0" ctrllimited="true" ctrlrange="-180 180"/>
+    <position name="pos_5" joint="5_join" kp="0" ctrllimited="true" ctrlrange="-180 180"/>
+    <position name="pos_6" joint="6_join" kp="0" ctrllimited="true" ctrlrange="-180 180"/>
+  </actuator>
+
+</mujoco>

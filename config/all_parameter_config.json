@@ -1,0 +1,76 @@
+{
+  "vision_grasp": {
+    "camera": {
+      "device_id": 0,
+      "fixed_depth_value": 255.0
+    },
+    "sgbm": {
+      "min_disparity": 0,
+      "num_disparities": 128,
+      "block_size": 5,
+      "uniqueness": 10
+    },
+    "depth_mode": "固定深度",
+    "vision_detection": {
+      "detection_type": "color",
+      "hsv_lower": [
+        0,
+        0,
+        0
+      ],
+      "hsv_upper": [
+        179,
+        255,
+        50
+      ],
+      "min_area": 500,
+      "circle_dp": 1.2,
+      "circle_min_dist": 20,
+      "circle_param1": 100,
+      "circle_param2": 30,
+      "circle_min_radius": 5,
+      "circle_max_radius": 200
+    },
+    "grasp_params": {
+      "euler_angles": [
+        0.0,
+        0.0,
+        180.0
+      ],
+      "use_dynamic_pose": true,
+      "motion_speed": 500,
+      "motion_acceleration": 300,
+      "tcp_offset": [
+        -15.0,
+        0.0,
+        130.0
+      ],
+      "claw_angles": [
+        0.0,
+        70.0
+      ]
+    }
+  },
+  "embodied_intelligence": {
+    "grasp_params": {
+      "euler_angles": [
+        0.0,
+        0.0,
+        180.0
+      ],
+      "use_dynamic_pose": false,
+      "motion_speed": 500,
+      "motion_acceleration": 250,
+      "tcp_offset": [
+        -20.0,
+        0.0,
+        130.0
+      ],
+      "grasp_depth": 255.0,
+      "claw_angles": [
+        0,
+        65
+      ]
+    }
+  }
+}
