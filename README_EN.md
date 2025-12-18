@@ -58,30 +58,6 @@ Horizon_Arm_New/
 │   │   └── deepseek/             # DeepSeek
 │   └── services/                 # Service encapsulation layer
 │
-├── ⚙️ Control_SDK/               # Motor control core SDK
-│   └── Control_Core/             # Control core module
-│       ├── modules/              # Function modules
-│       │   ├── control_actions.py    # Control actions
-│       │   ├── read_parameters.py    # Parameter reading
-│       │   ├── modify_parameters.py  # Parameter modification
-│       │   ├── homing_commands.py    # Homing control
-│       │   └── trigger_actions.py    # Trigger actions
-│       ├── motor_controller_modular.py  # Modular controller
-│       ├── can_interface.py      # CAN communication interface
-│       └── commands.py           # Command builder
-│
-├── 🎯 core/                      # Core algorithm modules
-│   ├── arm_core/                 # Robotic arm core algorithms
-│   │   ├── kinematics.py         # Kinematics calculation
-│   │   ├── vision_detection.py   # Visual detection
-│   │   ├── Depth_Estimation.py   # Depth estimation
-│   │   ├── Hand_Eye_Calibration.py  # Hand-eye calibration
-│   │   ├── trajectory_executor.py    # Trajectory execution
-│   │   └── rrt_planner.py        # Path planning
-│   └── embodied_core/            # Embodied intelligence core
-│       ├── hierarchical_decision_system.py  # Hierarchical decision system
-│       └── mujoco_kinematics_control_core.py  # MuJoCo control
-│
 ├── 🖥️ Main_UI/                   # Graphical User Interface
 │   ├── ui/                       # Interface components
 │   ├── widgets/                  # Function widgets
