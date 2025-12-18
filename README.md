@@ -60,30 +60,6 @@ Horizon_Arm_New/
 │   │   └── deepseek/             # DeepSeek
 │   └── services/                 # 服务封装层
 │
-├── ⚙️ Control_SDK/               # 电机控制核心SDK
-│   └── Control_Core/             # 控制核心模块
-│       ├── modules/              # 功能模块
-│       │   ├── control_actions.py    # 控制动作
-│       │   ├── read_parameters.py    # 参数读取
-│       │   ├── modify_parameters.py  # 参数修改
-│       │   ├── homing_commands.py    # 回零控制
-│       │   └── trigger_actions.py    # 触发动作
-│       ├── motor_controller_modular.py  # 模块化控制器
-│       ├── can_interface.py      # CAN通信接口
-│       └── commands.py           # 命令构建器
-│
-├── 🎯 core/                      # 核心算法模块
-│   ├── arm_core/                 # 机械臂核心算法
-│   │   ├── kinematics.py         # 运动学计算
-│   │   ├── vision_detection.py   # 视觉检测
-│   │   ├── Depth_Estimation.py   # 深度估计
-│   │   ├── Hand_Eye_Calibration.py  # 手眼标定
-│   │   ├── trajectory_executor.py    # 轨迹执行
-│   │   └── rrt_planner.py        # 路径规划
-│   └── embodied_core/            # 具身智能核心
-│       ├── hierarchical_decision_system.py  # 分层决策系统
-│       └── mujoco_kinematics_control_core.py  # MuJoCo控制
-│
 ├── 🖥️ Main_UI/                   # 图形用户界面
 │   ├── ui/                       # 界面组件
 │   ├── widgets/                  # 功能控件
