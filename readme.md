@@ -112,9 +112,6 @@ python verify_sdk_integrity.py
 ✅ SDK完整性验证通过
 ```
 
-### 1.3 检查授权
-
-SDK需要授权才能运行。确保项目目录下有授权文件。
 
 ---
 
