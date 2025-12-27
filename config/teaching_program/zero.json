@@ -1,0 +1,34 @@
+[
+  {
+    "index": 1,
+    "joint_angles": [
+      -0.0,
+      -0.0,
+      0.0,
+      -0.0,
+      -0.0,
+      0.0
+    ],
+    "mode": "joint",
+    "timestamp": 1758545873.2373824,
+    "interpolation_type": "cartesian",
+    "interpolation_params": {
+      "type": "trapezoid",
+      "max_speed": 200,
+      "acceleration": 500,
+      "deceleration": 500
+    },
+    "end_pose": {
+      "position": [
+        282.4,
+        3.5698454195145345e-15,
+        384.5
+      ],
+      "euler_angles": [
+        0.0,
+        -90.0,
+        -180.0
+      ]
+    }
+  }
+]

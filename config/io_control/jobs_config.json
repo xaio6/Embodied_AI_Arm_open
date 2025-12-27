@@ -1,0 +1,258 @@
+{
+  "zero": {
+    "name": "zero",
+    "description": "回零位的作业",
+    "interpolation_type": "cartesian",
+    "steps": [
+      {
+        "step_id": 1,
+        "type": "move_joints",
+        "description": "关节运动到点1",
+        "parameters": {
+          "joint_angles": [
+            -0.0,
+            -0.0,
+            0.0,
+            -0.0,
+            -0.0,
+            0.0
+          ],
+          "interpolation_type": "cartesian",
+          "mode": "joint",
+          "end_pose": {
+            "position": [
+              282.4,
+              3.5698454195145345e-15,
+              384.5
+            ],
+            "euler_angles": [
+              0.0,
+              -90.0,
+              -180.0
+            ]
+          },
+          "interpolation_params_type": "trapezoid",
+          "max_speed": 200,
+          "acceleration": 500,
+          "deceleration": 500
+        },
+        "duration": 1.2,
+        "timestamp": 1758545873.2373824
+      },
+      {
+        "step_id": 2,
+        "type": "io_control",
+        "description": "",
+        "parameters": {
+          "do_number": 0,
+          "do_name": "DO0",
+          "gpio": 2,
+          "output_level": "低电平"
+        }
+      }
+    ],
+    "created_time": "2025-09-22T20:58:16.868554",
+    "modified_time": "2025-09-23T13:33:16.362250"
+  },
+  "stop": {
+    "name": "stop",
+    "description": "紧急停止作业 - 停止所有电机",
+    "interpolation_type": "joint",
+    "steps": [
+      {
+        "step_id": 1,
+        "type": "emergency_stop",
+        "description": "紧急停止所有电机",
+        "parameters": {},
+        "duration": 1.0,
+        "timestamp": 1758597545.6707911
+      },
+      {
+        "step_id": 2,
+        "type": "io_control",
+        "description": "",
+        "parameters": {
+          "do_number": 0,
+          "do_name": "DO0",
+          "gpio": 2,
+          "output_level": "高电平"
+        }
+      }
+    ],
+    "created_time": "2025-09-23T11:19:05.670791",
+    "modified_time": "2025-09-23T13:33:14.261484"
+  },
+  "test": {
+    "name": "test",
+    "description": "从示教程序导入，包含4个运动步骤",
+    "interpolation_type": "joint",
+    "steps": [
+      {
+        "step_id": 1,
+        "type": "move_joints",
+        "description": "关节运动到点1",
+        "parameters": {
+          "joint_angles": [
+            -0.0,
+            -0.0,
+            0.0,
+            -0.0,
+            30.0,
+            -0.0
+          ],
+          "interpolation_type": "point_to_point",
+          "mode": "joint",
+          "end_pose": {
+            "position": [
+              274.03998519614896,
+              5.480294426184405e-15,
+              353.3
+            ],
+            "euler_angles": [
+              -6.076648503501691e-15,
+              -60.00000000000001,
+              -180.0
+            ]
+          },
+          "interpolation_params_type": "trapezoid",
+          "max_speed": 200,
+          "acceleration": 500,
+          "deceleration": 500
+        },
+        "duration": 1.2,
+        "timestamp": 1759413329.7059922
+      },
+      {
+        "step_id": 2,
+        "type": "wait",
+        "description": "休息1秒",
+        "parameters": {
+          "wait_duration": 1.0
+        }
+      },
+      {
+        "step_id": 3,
+        "type": "move_joints",
+        "description": "关节运动到点2",
+        "parameters": {
+          "joint_angles": [
+            1.076408574684068e-15,
+            -8.524077092427902,
+            7.946659053416994,
+            1.6158378387961307e-15,
+            30.577418039010904,
+            2.1853849276920414e-15
+          ],
+          "interpolation_type": "cartesian",
+          "mode": "base",
+          "end_pose": {
+            "position": [
+              244.05805162814886,
+              1.096058885236881e-14,
+              353.3
+            ],
+            "euler_angles": [
+              -1.2153297007003384e-14,
+              -60.00000000000001,
+              -180.0
+            ]
+          },
+          "interpolation_params_type": "cartesian",
+          "linear_velocity": 150.0,
+          "angular_velocity": 90.0,
+          "linear_acceleration": 300.0,
+          "angular_acceleration": 60.0
+        },
+        "duration": 1.2,
+        "timestamp": 1759413336.1872432
+      },
+      {
+        "step_id": 4,
+        "type": "wait",
+        "description": "休息1秒",
+        "parameters": {
+          "wait_duration": 1.0
+        }
+      },
+      {
+        "step_id": 5,
+        "type": "move_joints",
+        "description": "关节运动到点3",
+        "parameters": {
+          "joint_angles": [
+            1.0007091723477958e-15,
+            -6.956087684811152,
+            -1.3343795002933634,
+            9.925094954497165e-15,
+            38.29046718510451,
+            -1.2130002562222046e-15
+          ],
+          "interpolation_type": "joint",
+          "mode": "base",
+          "end_pose": {
+            "position": [
+              244.05805162814892,
+              1.460391307983219e-14,
+              383.30000000000007
+            ],
+            "euler_angles": [
+              -1.8229945510505073e-14,
+              -60.00000000000001,
+              -179.99999999999997
+            ]
+          },
+          "interpolation_params_type": "joint_space",
+          "joint_max_velocity": 90.0,
+          "joint_max_acceleration": 180.0
+        },
+        "duration": 1.2,
+        "timestamp": 1759413342.1547902
+      },
+      {
+        "step_id": 6,
+        "type": "wait",
+        "description": "休息1秒",
+        "parameters": {
+          "wait_duration": 1.0
+        }
+      },
+      {
+        "step_id": 7,
+        "type": "move_joints",
+        "description": "关节运动到点4",
+        "parameters": {
+          "joint_angles": [
+            -1.6243738862993996e-16,
+            -12.62324984708637,
+            10.31201270649606,
+            1.0109093595889021e-14,
+            32.30829596411973,
+            -5.586845933694905e-15
+          ],
+          "interpolation_type": "point_to_point",
+          "mode": "tool",
+          "end_pose": {
+            "position": [
+              229.07594452410575,
+              1.0469885957977921e-14,
+              357.30689320980173
+            ],
+            "euler_angles": [
+              -1.2154737896056758e-14,
+              -60.00294117647059,
+              -179.99999999999997
+            ]
+          },
+          "interpolation_params_type": "trapezoid",
+          "max_speed": 200,
+          "acceleration": 500,
+          "deceleration": 500
+        },
+        "duration": 1.2,
+        "timestamp": 1759413349.8652253
+      }
+    ],
+    "created_time": "2025-10-02T21:57:06.245951",
+    "modified_time": "2025-10-02T22:16:25.823919"
+  }
+}

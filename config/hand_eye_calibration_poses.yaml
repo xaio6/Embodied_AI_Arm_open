@@ -1,0 +1,44 @@
+description: 手眼标定预设位置配置
+notes: 关节角度单位为度制，范围建议在±120度内
+pose_count: 5
+poses:
+- joint_angles:
+  - 14.0
+  - 16.0
+  - -32.4
+  - -7.9
+  - 63.7
+  - 18.1
+  name: pose_1
+- joint_angles:
+  - 18.8
+  - 17.7
+  - -33.5
+  - -30.4
+  - 69.1
+  - 13.6
+  name: pose_2
+- joint_angles:
+  - 15.9
+  - -15.7
+  - -0.3
+  - -21.2
+  - 66.6
+  - 14.6
+  name: pose_3
+- joint_angles:
+  - 15.8
+  - -12.6
+  - -4.2
+  - -24.7
+  - 77.4
+  - -6.6
+  name: pose_4
+- joint_angles:
+  - -0.7
+  - -11.7
+  - -5.2
+  - 8.2
+  - 70.8
+  - -9.0
+  name: pose_5

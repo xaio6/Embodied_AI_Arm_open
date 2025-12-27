@@ -1,0 +1,187 @@
+{
+  "vision_grasp": {
+    "camera": {
+      "device_id": 1,
+      "fixed_depth_value": 255.0
+    },
+    "sgbm": {
+      "min_disparity": 0,
+      "num_disparities": 128,
+      "block_size": 5,
+      "uniqueness": 10
+    },
+    "depth_mode": "固定深度",
+    "vision_detection": {
+      "detection_type": "color",
+      "hsv_lower": [
+        57,
+        202,
+        0
+      ],
+      "hsv_upper": [
+        77,
+        255,
+        54
+      ],
+      "min_area": 500,
+      "circle_dp": 1.2,
+      "circle_min_dist": 20,
+      "circle_param1": 100,
+      "circle_param2": 30,
+      "circle_min_radius": 5,
+      "circle_max_radius": 200,
+      "color_presets": {
+        "red": {
+          "lower": [
+            0,
+            50,
+            80
+          ],
+          "upper": [
+            10,
+            250,
+            255
+          ]
+        },
+        "yellow": {
+          "lower": [
+            0,
+            60,
+            80
+          ],
+          "upper": [
+            50,
+            250,
+            255
+          ]
+        },
+        "white": {
+          "lower": [
+            0,
+            20,
+            200
+          ],
+          "upper": [
+            179,
+            45,
+            255
+          ]
+        },
+        "black": {
+          "lower": [
+            57,
+            148,
+            0
+          ],
+          "upper": [
+            77,
+            228,
+            59
+          ]
+        }
+      }
+    },
+    "grasp_params": {
+      "euler_angles": [
+        0.0,
+        0.0,
+        180.0
+      ],
+      "use_dynamic_pose": false,
+      "motion_speed": 500,
+      "motion_acceleration": 300,
+      "tcp_offset": [
+        -15.0,
+        25.0,
+        85.0
+      ],
+      "claw_angles": [
+        0.0,
+        65.0
+      ]
+    }
+  },
+  "embodied_intelligence": {
+    "grasp_params": {
+      "euler_angles": [
+        0.0,
+        0.0,
+        180.0
+      ],
+      "use_dynamic_pose": true,
+      "motion_speed": 500,
+      "motion_acceleration": 250,
+      "tcp_offset": [
+        -20.0,
+        0.0,
+        131.0
+      ],
+      "grasp_depth": 270.0,
+      "claw_angles": [
+        0.0,
+        70.0
+      ]
+    }
+  },
+  "joycon_control": {
+    "basic_params": {
+      "stick_deadzone": 700
+    },
+    "cartesian_params": {
+      "position_step": 0.5,
+      "rotation_step": 0.5,
+      "max_speed": 150.0,
+      "max_angular_speed": 30.0
+    },
+    "joint_params": {
+      "angle_step": 0.5,
+      "max_speed": 400,
+      "acceleration": 500,
+      "deceleration": 500
+    },
+    "speed_control": {
+      "speed_levels": [
+        0.5,
+        1.0,
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        4.0
+      ],
+      "current_speed_index": 6
+    },
+    "joint_limits": [
+      [
+        -180.0,
+        180.0
+      ],
+      [
+        -180.0,
+        180.0
+      ],
+      [
+        -180.0,
+        180.0
+      ],
+      [
+        -180.0,
+        180.0
+      ],
+      [
+        -180.0,
+        180.0
+      ],
+      [
+        -180.0,
+        180.0
+      ]
+    ],
+    "workspace_limits": {
+      "min_radius": 50,
+      "max_radius": 600,
+      "min_z": -200,
+      "max_z": 600
+    }
+  }
+}

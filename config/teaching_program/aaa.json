@@ -1,0 +1,100 @@
+[
+  {
+    "index": 1,
+    "joint_angles": [
+      -0.0,
+      -0.0,
+      0.0,
+      -0.0,
+      30.0,
+      -0.0
+    ],
+    "mode": "joint",
+    "timestamp": 1764673031.6490412,
+    "interpolation_type": "point_to_point",
+    "interpolation_params": {
+      "type": "point_to_point",
+      "max_speed": 200,
+      "acceleration": 500,
+      "deceleration": 500
+    },
+    "end_pose": {
+      "position": [
+        283.5662646377778,
+        6.490628035480972e-15,
+        347.8
+      ],
+      "euler_angles": [
+        -6.076648503501691e-15,
+        -60.00000000000001,
+        -180.0
+      ]
+    }
+  },
+  {
+    "index": 2,
+    "joint_angles": [
+      1.5301262510067687e-14,
+      -15.77240322253111,
+      13.801381112250722,
+      -5.153012483505143e-14,
+      31.971022110280387,
+      6.351775761225477e-14
+    ],
+    "mode": "base",
+    "timestamp": 1764673046.6936584,
+    "interpolation_type": "cartesian",
+    "interpolation_params": {
+      "type": "cartesian",
+      "linear_velocity": 150.0,
+      "angular_velocity": 90.0,
+      "linear_acceleration": 300.0,
+      "angular_acceleration": 60.0
+    },
+    "end_pose": {
+      "position": [
+        228.1013998697777,
+        3.245314017740488e-14,
+        347.80000000000007
+      ],
+      "euler_angles": [
+        -3.038324251750849e-14,
+        -60.00000000000001,
+        -180.0
+      ]
+    }
+  },
+  {
+    "index": 3,
+    "joint_angles": [
+      2.387768979653352e-14,
+      -11.148572773541147,
+      -5.9794244209525775,
+      -6.172558932132167e-14,
+      47.12799719449372,
+      7.216458738726458e-14
+    ],
+    "mode": "base",
+    "timestamp": 1764673050.7696311,
+    "interpolation_type": "cartesian",
+    "interpolation_params": {
+      "type": "cartesian",
+      "linear_velocity": 150.0,
+      "angular_velocity": 90.0,
+      "linear_acceleration": 300.0,
+      "angular_acceleration": 60.0
+    },
+    "end_pose": {
+      "position": [
+        228.1013998697775,
+        3.992680440192183e-14,
+        407.7638671360001
+      ],
+      "euler_angles": [
+        -4.2536539524511886e-14,
+        -60.00000000000001,
+        -180.0
+      ]
+    }
+  }
+]
