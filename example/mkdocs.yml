@@ -1,0 +1,39 @@
+site_name: HorizonArm SDK 开发者文档
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - content.code.copy
+    - content.code.annotate
+
+nav:
+  - 概览: index.md
+  - ⚠️ 安全须知: safety.md
+  - 快速入门: quickstart.md
+  
+  - SDK 模块:
+      - MotionSDK - 运动控制: motion.md
+      - VisualGraspSDK - 视觉抓取: vision.md
+      - JoyconSDK - 手柄控制: joycon.md
+      - DigitalTwinSDK - 仿真: simulation.md
+      - EmbodiedSDK - 具身智能: embodied.md
+      - IOSDK - IO控制: io.md
+  
+  - 扩展与参考:
+      - 驱动扩展: driver_extension.md
+      - API 参考: api_reference.md
+      - 常见问题: troubleshooting.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - tables
+  - attr_list
+  - md_in_html
+
